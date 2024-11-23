@@ -3,8 +3,9 @@
 
 ## Querys
 
+### dCalendario Simples
 ```pq 
-//dCalendario
+
 let
     MenorData = #date(2024,1,1),
     MaiorData = #date(2024,9,29),
@@ -62,5 +63,27 @@ let
 in
     Tabela![image](https://github.com/user-attachments/assets/981ff8d8-042d-4a18-8bdf-a55147dad2cf)
 
+```
+
+### Juntar/Criar várias colunas de uma só vez
+
+```pq
+JuntarColunas = Table.AddColumn(
+    LinhasFiltradas, 
+    "Tempos", each  
+        [
+          EntradaFabrica = [Dt Entrada] & [Hr Entrada], 
+          #"InicioCarreg." = [DT INI CARGA] & [HR INI CARGA], 
+          #"FimCarreg."     = [DT FIM CARGA]& [HR FIM CARGA], 
+          CriacaoNota  = [Dt Emissão]& [Hr Criação] 
+        ], 
+        type [
+                EntradaFabrica   = datetime,
+                #"InicioCarreg." = datetime, 
+                #"FimCarreg."    = datetime, 
+                CriacaoNota      = datetime
+            ]
+  )
+![image](https://github.com/user-attachments/assets/ad4a0ad1-f39e-4e35-94cf-e8b1feb5db88)
 
 ```
