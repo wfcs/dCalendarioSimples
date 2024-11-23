@@ -3,8 +3,8 @@
 
 ## Querys
 
-```pq Dcalendario
-
+```pq 
+//dCalendario
 let
     MenorData = #date(2024,1,1),
     MaiorData = #date(2024,9,29),
