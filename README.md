@@ -62,7 +62,6 @@ let
     )
 in
     Tabela![image](https://github.com/user-attachments/assets/981ff8d8-042d-4a18-8bdf-a55147dad2cf)
-
 ```
 
 ### Juntar/Criar várias colunas de uma só vez
@@ -84,6 +83,4 @@ JuntarColunas = Table.AddColumn(
                 CriacaoNota      = datetime
             ]
   )
-![image](https://github.com/user-attachments/assets/ad4a0ad1-f39e-4e35-94cf-e8b1feb5db88)
-
 ```
