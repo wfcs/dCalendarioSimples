@@ -1,2 +1,2 @@
-# Codigos PowerQuery 
+# Descrição
 > Usados no Power BI e Excel
